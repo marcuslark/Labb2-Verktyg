@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Disabled;
 @Disabled
 public class TextProcessorTest {
 
-    //@RepeatedTest(10) -Causes errors!
+    @RepeatedTest(10) //-->Causes errors! Uncomment to run smoothly!
     @Test
     @DisplayName("Example test method with no logic")
     public void testNoLogic() {
