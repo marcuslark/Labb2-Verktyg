@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
+    Calculator calculator = new Calculator();
+
     int[] testArray1 = new int[] {1,2,3};
     int[] testArray2 = new int[] {1,2,3};
 
@@ -41,11 +43,28 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testAdd2() {
+        assertEquals(4, calculator.add(2,2));
+    }
+
+    @Test
+    public void testSubtract() {
+        assertEquals(10, calculator.subtract(12,2));
+    }
+
+    @Test
+    public void testDivide() {
+        assertEquals(2, calculator.divide(18,9));
+    }
+
+    @Test
+    public void testMultiply() {
+        assertEquals(16, calculator.multiply(4,4));
+    }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3})
     void testAdd(int n) {
-        Calculator calculator = new Calculator();
         assertEquals(1 + n, calculator.add(1, n));
     }
 
